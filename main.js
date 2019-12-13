@@ -26,6 +26,12 @@ document.body.onmousemove = function (e) {
         var left = parseInt(div1.style.left) || 0
         var resultY = top + deltaY
         var resultX = left + deltaX
+        if (resultX > document.body.clientWidth - 100) {
+            resultX = document.body.clientWidth - 100
+        }
+        if (resultY > document.body.clientHeight - 100) {
+            resultY = document.body.clientHeight - 100
+        }
         if (resultX < 0) {
             resultX = 0
         }
